@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://n1j20631q70j"]
+
+[ext_resource type="Script" uid="uid://30qe3uhh571o" path="res://Main Menu/Main.cs" id="1_sbqan"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ot7eb"]
+font_size = 24
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Main" type="Node2D" unique_id=678812317]
+script = ExtResource("1_sbqan")
+
+[node name="start" type="Button" parent="." unique_id=1194109729]
+offset_left = 324.0
+offset_top = 82.0
+offset_right = 816.0
+offset_bottom = 270.0
+text = "Start"
+
+[node name="quit" type="Button" parent="." unique_id=704038636]
+offset_left = 327.0
+offset_top = 295.0
+offset_right = 819.0
+offset_bottom = 483.0
+text = "Quit"
+
+[node name="controls" type="Label" parent="." unique_id=1325391953]
+offset_left = 18.0
+offset_top = 528.0
+offset_right = 435.0
+offset_bottom = 627.0
+text = "Control hammer with the mouse. 
+To hit a robot or bomb use the left click
+To pause the game press the tab key."
+label_settings = SubResource("LabelSettings_ot7eb")
+
+[connection signal="pressed" from="start" to="." method="onStartPressed"]
+[connection signal="pressed" from="quit" to="." method="onQuitPressed"]
