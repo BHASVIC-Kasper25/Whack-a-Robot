@@ -1,3 +1,12 @@
 [gd_scene format=3 uid="uid://cj6sxwts1hh7r"]
 
-[node name="Node2D" type="Node2D" unique_id=180533987]
+[ext_resource type="Script" uid="uid://cb2mr4l0gut4y" path="res://Game/Game.cs" id="1_1r4le"]
+[ext_resource type="Texture2D" uid="uid://cdvx8gp8sqw4a" path="res://Assets/background template.png" id="1_bk3v5"]
+
+[node name="Game" type="Node2D" unique_id=180533987]
+script = ExtResource("1_1r4le")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1287636459]
+position = Vector2(582.00006, 325)
+scale = Vector2(0.9227994, 0.9227994)
+texture = ExtResource("1_bk3v5")
