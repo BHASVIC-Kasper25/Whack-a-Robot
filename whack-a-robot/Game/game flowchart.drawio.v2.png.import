@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rts5qsm2h5v5"
-path="res://.godot/imported/game flowchart.drawio.v1.png-fca1d92f4da3a6e68d80cb9a69b48bf1.ctex"
+uid="uid://biq6st2e4avb6"
+path="res://.godot/imported/game flowchart.drawio.v2.png-6fbe1d34337febf6c08302a061584618.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/game flowchart.drawio.v1.png"
-dest_files=["res://.godot/imported/game flowchart.drawio.v1.png-fca1d92f4da3a6e68d80cb9a69b48bf1.ctex"]
+source_file="res://Game/game flowchart.drawio.v2.png"
+dest_files=["res://.godot/imported/game flowchart.drawio.v2.png-6fbe1d34337febf6c08302a061584618.ctex"]
 
 [params]
 

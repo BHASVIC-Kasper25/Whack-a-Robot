@@ -4,7 +4,9 @@ using System;
 public partial class Game : Node2D
 {
 	private PackedScene _robotScene=GD.Load<PackedScene>("res://Robot/robot.tscn");
-	private RandomNumberGenerator _rng=new RandomNumberGenerator();
+	private RandomNumberGenerator _rngX=new RandomNumberGenerator();
+	private RandomNumberGenerator _rngY=new RandomNumberGenerator();
+
 	private double spawnTime=1.0f;
 	private double _spawnTimer=0.0f;
 
@@ -36,6 +38,11 @@ public partial class Game : Node2D
 
 	public void spawn()
 	{
-		GD.Print("Spawn entered");
+		CharacterBody2D robotTemp=_robotScene.Instantiate<CharacterBody2D>();
+		int holeNumX=_rngX.RandiRange(0,2);
+		int holeNumY=_rngY.RandiRange(0,2);
+		robotTemp.Position=new Vector2(xCoo[holeNumX],yCoo[holeNumY]);
+		AddChild(robotTemp);
+
 	}
 }

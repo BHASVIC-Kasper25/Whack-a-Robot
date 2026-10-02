@@ -1,3 +1,23 @@
 [gd_scene format=3 uid="uid://cjta3pscoojh2"]
 
-[node name="Robot" type="Node2D" unique_id=1887457062]
+[ext_resource type="Script" uid="uid://baw7fvcm1sf3r" path="res://Robot/Robot.cs" id="1_7isc1"]
+[ext_resource type="Texture2D" uid="uid://bpekyvoc21ot7" path="res://Assets/Robot template.png" id="1_nkalu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ot7eb"]
+size = Vector2(72, 73)
+
+[node name="Robot" type="CharacterBody2D" unique_id=2069516372]
+script = ExtResource("1_7isc1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=837860699]
+position = Vector2(-1.9073486e-06, -1.9073486e-06)
+scale = Vector2(0.34324634, 0.3533654)
+texture = ExtResource("1_nkalu")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=186399224]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=810218491]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ot7eb")
+
+[connection signal="input_event" from="Hitbox" to="." method="onHitboxInputEvent"]
