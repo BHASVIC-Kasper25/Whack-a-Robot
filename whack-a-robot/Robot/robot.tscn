@@ -20,4 +20,5 @@ texture = ExtResource("1_nkalu")
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_ot7eb")
 
-[connection signal="input_event" from="Hitbox" to="." method="onHitboxInputEvent"]
+[connection signal="mouse_entered" from="Hitbox" to="." method="onHitboxMouseEntered"]
+[connection signal="mouse_exited" from="Hitbox" to="." method="onHitboxMouseExited"]
