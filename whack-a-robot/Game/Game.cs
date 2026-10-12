@@ -8,7 +8,7 @@ public partial class Game : Node2D
 	private RandomNumberGenerator _rngY=new RandomNumberGenerator();
 
 	private double spawnTime=1.0f;
-	private double _spawnTimer=0.0f;
+	private double _spawnTimer=1.0f;
 
 	Godot.Collections.Array<int> xCoo = [360, 570, 760];
 	Godot.Collections.Array<int> yCoo = [150, 330, 515];
@@ -41,6 +41,15 @@ public partial class Game : Node2D
 		CharacterBody2D robotTemp=_robotScene.Instantiate<CharacterBody2D>();
 		int holeNumX=_rngX.RandiRange(0,2);
 		int holeNumY=_rngY.RandiRange(0,2);
+		while(Global.Instance.xClear[holeNumX]==false && Global.Instance.yClear[holeNumY]==false)
+		{
+			holeNumX=_rngX.RandiRange(0,2);
+			holeNumY=_rngY.RandiRange(0,2);
+		}
+		Global.Instance.xClear[holeNumX]=false;
+		Global.Instance.yClear[holeNumY]=false;
+		Global.Instance.robotX=holeNumX;
+		Global.Instance.robotY=holeNumX;
 		robotTemp.Position=new Vector2(xCoo[holeNumX],yCoo[holeNumY]);
 		AddChild(robotTemp);
 
