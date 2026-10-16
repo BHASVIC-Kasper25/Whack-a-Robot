@@ -17,7 +17,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="JyfqhTz0uN4MJcbHUWPD-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="static Global Instance {get; private set;}&lt;div&gt;&lt;div&gt;Array xClear {get; set;} = [true, true, true]&lt;/div&gt;&lt;div&gt;Array yClear&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get; set;}&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;= [true, true, true]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;robotY=0&lt;/div&gt;&lt;/div&gt;&lt;div&gt;robotX=0&lt;/div&gt;" vertex="1">
-          <mxGeometry height="77.5" width="249.25" x="300.75" y="262.5" as="geometry" />
+          <mxGeometry height="90" width="249.25" x="300.75" y="250" as="geometry" />
         </mxCell>
         <mxCell id="JyfqhTz0uN4MJcbHUWPD-12" edge="1" parent="1" source="JyfqhTz0uN4MJcbHUWPD-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="JyfqhTz0uN4MJcbHUWPD-11">
           <mxGeometry relative="1" as="geometry" />
