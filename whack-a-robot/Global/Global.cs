@@ -10,6 +10,7 @@ public partial class Global : Node2D
 	public Godot.Collections.Array<bool> yClear {get; set;} = [true, true, true];
 	public int robotX {get; set;} =0;
 	public int robotY {get; set;} =0;
+	public int score {get; set;} =0;
 
 	public override void _Ready()
 	{

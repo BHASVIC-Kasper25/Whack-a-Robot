@@ -4,7 +4,6 @@ using System;
 public partial class Game : Node2D
 {
 	private PackedScene _robotScene=GD.Load<PackedScene>("res://Robot/robot.tscn");
-	//private PackedScene _timerScene=GD.Load<PackedScene>("res://Timer/timer.tscn");
 
 
 	private RandomNumberGenerator _rngX=new RandomNumberGenerator();
@@ -12,7 +11,6 @@ public partial class Game : Node2D
 
 	private double spawnTime=1.0f;
 	private double _spawnTimer=1.0f;
-	private double gameTime=10.0f;
 
 	Godot.Collections.Array<int> xCoo = [360, 570, 760];
 	Godot.Collections.Array<int> yCoo = [150, 330, 515];
@@ -21,9 +19,7 @@ public partial class Game : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		//Label timerTemp=_timerScene.Instantiate<Label>();
-		//timerTemp.Position=new Vector2(25,25);
-		//AddChild(timerTemp);
+		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -41,14 +37,6 @@ public partial class Game : Node2D
 
 		}
 
-		if(gameTime>0)
-		{
-			gameTime-=delta;
-		}
-		else
-		{
-			GetTree().ChangeSceneToFile("res://Main Menu/main.tscn");
-		}
 	}
 
 	public void spawn()
@@ -70,8 +58,5 @@ public partial class Game : Node2D
 
 	}
 
-	public double GameTimer
-	{
-		get{return gameTime; }
-	}
+	
 }

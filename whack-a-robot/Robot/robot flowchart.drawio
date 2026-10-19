@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="OG5QkjVZCYHO1LI21iWa">
-    <mxGraphModel dx="1166" dy="802" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1405" dy="904" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -105,8 +105,8 @@
         <mxCell id="IEnA2qyGLRrnQBURsua6-6" edge="1" parent="1" source="KZqMQKlNbZtDTuJYTomW-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="IEnA2qyGLRrnQBURsua6-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="IEnA2qyGLRrnQBURsua6-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="QueueFree()&lt;div&gt;&lt;div&gt;Global.xClear[thisHoleNumX]=true&amp;nbsp;&lt;/div&gt;&lt;div&gt;Global.yClear[thisHoleNumY]=true&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="49.5" width="214.82" x="1118" y="274.25" as="geometry" />
+        <mxCell id="IEnA2qyGLRrnQBURsua6-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="QueueFree()&lt;div&gt;&lt;div&gt;Global.xClear[thisHoleNumX]=true&amp;nbsp;&lt;/div&gt;&lt;div&gt;Global.yClear[thisHoleNumY]=true&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Global.score=Global.score+5&lt;/div&gt;" vertex="1">
+          <mxGeometry height="62.75" width="214.82" x="1115" y="267.63" as="geometry" />
         </mxCell>
         <mxCell id="IEnA2qyGLRrnQBURsua6-11" edge="1" parent="1" source="IEnA2qyGLRrnQBURsua6-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="KZqMQKlNbZtDTuJYTomW-21">
           <mxGeometry relative="1" as="geometry" />

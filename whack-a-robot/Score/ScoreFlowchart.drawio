@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="TRuYrpafF0i2MOysPgSp">
+    <mxGraphModel dx="1166" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yKRhux-e1JQ8cwaSVZ-f-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Score" vertex="1">
+          <mxGeometry height="60" width="120" x="365" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yKRhux-e1JQ8cwaSVZ-f-6" edge="1" parent="1" source="yKRhux-e1JQ8cwaSVZ-f-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;defaultLabelBackgroundColor=gap;" target="yKRhux-e1JQ8cwaSVZ-f-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKRhux-e1JQ8cwaSVZ-f-2" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="Start" vertex="1">
+          <mxGeometry height="60" width="100" x="260" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="yKRhux-e1JQ8cwaSVZ-f-7" edge="1" parent="1" source="yKRhux-e1JQ8cwaSVZ-f-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=gap;" target="yKRhux-e1JQ8cwaSVZ-f-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKRhux-e1JQ8cwaSVZ-f-3" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;labelPerimeter=1;" value="_Process" vertex="1">
+          <mxGeometry height="60" width="100" x="260" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="yKRhux-e1JQ8cwaSVZ-f-4" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="End" vertex="1">
+          <mxGeometry height="60" width="100" x="260" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="yKRhux-e1JQ8cwaSVZ-f-9" edge="1" parent="1" source="yKRhux-e1JQ8cwaSVZ-f-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=gap;" target="yKRhux-e1JQ8cwaSVZ-f-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKRhux-e1JQ8cwaSVZ-f-5" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="_Process" vertex="1">
+          <mxGeometry height="60" width="100" x="490" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="yKRhux-e1JQ8cwaSVZ-f-11" edge="1" parent="1" source="yKRhux-e1JQ8cwaSVZ-f-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=gap;" target="yKRhux-e1JQ8cwaSVZ-f-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKRhux-e1JQ8cwaSVZ-f-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="GetNode&amp;lt;Label&amp;gt;(&quot;Label&quot;).Text=Global.score.ToString(&quot;D2&quot;)" vertex="1">
+          <mxGeometry height="30" width="320" x="380" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="yKRhux-e1JQ8cwaSVZ-f-10" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="End" vertex="1">
+          <mxGeometry height="60" width="100" x="490" y="370" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cb2mr4l0gut4y" path="res://Game/Game.cs" id="1_1r4le"]
 [ext_resource type="Texture2D" uid="uid://cdvx8gp8sqw4a" path="res://Assets/background template.png" id="1_bk3v5"]
-[ext_resource type="Script" uid="uid://cg6e4g0vnf3mu" path="res://Timer/Timer.cs" id="3_7raqb"]
+[ext_resource type="Script" uid="uid://w1yw8s2hkvf3" path="res://Timer/Timer.cs" id="3_7raqb"]
+[ext_resource type="Script" uid="uid://ds8nqkr6qqedy" path="res://Score/Score.cs" id="4_jcm6v"]
 
 [node name="Game" type="Node2D" unique_id=180533987]
 script = ExtResource("1_1r4le")
@@ -12,10 +13,35 @@ position = Vector2(582.00006, 325)
 scale = Vector2(0.9227994, 0.9227994)
 texture = ExtResource("1_bk3v5")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2054125767]
+[node name="Timer" type="Control" parent="." unique_id=1672396075]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_7raqb")
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1090843871]
+[node name="Label" type="Label" parent="Timer" unique_id=1511456477]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Timer: "
-script = ExtResource("3_7raqb")
+
+[node name="Timer" type="Timer" parent="Timer" unique_id=1338310101]
+autostart = true
+
+[node name="Score" type="Control" parent="." unique_id=530635890]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 13.0
+offset_top = 55.0
+offset_right = 66.0
+offset_bottom = 88.0
+script = ExtResource("4_jcm6v")
+
+[node name="Label" type="Label" parent="Score" unique_id=1319966381]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 6.0
+offset_right = 54.0
+offset_bottom = 29.0
+
+[connection signal="timeout" from="Timer/Timer" to="Timer" method="_onTimerTimeout"]

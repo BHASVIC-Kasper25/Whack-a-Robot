@@ -21,6 +21,7 @@ public partial class Robot : CharacterBody2D
 	{
 		if (Input.IsActionPressed("left_click") && onRobot==true)
 		{
+			Global.Instance.score=Global.Instance.score+5;
 			Global.Instance.xClear[thisHoleNumX]=true;
 			Global.Instance.yClear[thisHoleNumY]=true;
 			QueueFree();
@@ -33,7 +34,6 @@ public partial class Robot : CharacterBody2D
 		else
 		{
 			_killTimer=killTime;
-			GD.Print("Self deletion");
 			Global.Instance.xClear[thisHoleNumX]=true;
 			Global.Instance.yClear[thisHoleNumY]=true;
 			QueueFree();
