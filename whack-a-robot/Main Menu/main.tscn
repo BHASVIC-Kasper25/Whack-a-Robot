@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://n1j20631q70j"]
 
 [ext_resource type="Script" uid="uid://30qe3uhh571o" path="res://Main Menu/Main.cs" id="1_sbqan"]
+[ext_resource type="Script" uid="uid://dk7f13a1eqv4y" path="res://High Score/HighScore.cs" id="2_24ds3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ot7eb"]
 font_size = 24
 outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qr76m"]
+font_size = 29
+outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node2D" unique_id=678812317]
@@ -33,6 +39,23 @@ text = "Control hammer with the mouse.
 To hit a robot or bomb use the left click
 To pause the game press the tab key."
 label_settings = SubResource("LabelSettings_ot7eb")
+
+[node name="High Score" type="Control" parent="." unique_id=1774697186]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 567.0
+offset_top = 534.0
+offset_right = 1104.0
+offset_bottom = 627.0
+script = ExtResource("2_24ds3")
+
+[node name="Label" type="Label" parent="High Score" unique_id=1720522138]
+layout_mode = 0
+offset_left = -558.0
+offset_top = -523.0
+offset_right = -119.0
+offset_bottom = -432.0
+label_settings = SubResource("LabelSettings_qr76m")
 
 [connection signal="pressed" from="start" to="." method="onStartPressed"]
 [connection signal="pressed" from="quit" to="." method="onQuitPressed"]

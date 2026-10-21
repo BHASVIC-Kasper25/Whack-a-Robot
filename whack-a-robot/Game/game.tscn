@@ -5,6 +5,16 @@
 [ext_resource type="Script" uid="uid://w1yw8s2hkvf3" path="res://Timer/Timer.cs" id="3_7raqb"]
 [ext_resource type="Script" uid="uid://ds8nqkr6qqedy" path="res://Score/Score.cs" id="4_jcm6v"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_3h7m6"]
+font_size = 22
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_24ds3"]
+font_size = 30
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Game" type="Node2D" unique_id=180533987]
 script = ExtResource("1_1r4le")
 
@@ -24,6 +34,7 @@ script = ExtResource("3_7raqb")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_3h7m6")
 
 [node name="Timer" type="Timer" parent="Timer" unique_id=1338310101]
 autostart = true
@@ -39,9 +50,9 @@ script = ExtResource("4_jcm6v")
 
 [node name="Label" type="Label" parent="Score" unique_id=1319966381]
 layout_mode = 0
-offset_left = 14.0
-offset_top = 6.0
-offset_right = 54.0
-offset_bottom = 29.0
+offset_left = -10.0
+offset_top = -23.0
+offset_right = 67.0
+label_settings = SubResource("LabelSettings_24ds3")
 
 [connection signal="timeout" from="Timer/Timer" to="Timer" method="_onTimerTimeout"]

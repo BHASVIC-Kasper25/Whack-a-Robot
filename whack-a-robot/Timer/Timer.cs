@@ -3,7 +3,7 @@ using System;
 
 public partial class Timer : Control
 {
-	private int _gameTime=10;
+	private int _gameTime=60;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -13,7 +13,7 @@ public partial class Timer : Control
 		_gameTime--;
 		int m=(int)(_gameTime/60f);
 		int s=_gameTime-m*60;
-		GetNode<Label>("Label").Text=m.ToString("D2")+":"+s.ToString("D2");
+		GetNode<Label>("Label").Text="Timer: "+m.ToString("D2")+":"+s.ToString("D2");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

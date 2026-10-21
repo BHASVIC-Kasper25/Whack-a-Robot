@@ -31,8 +31,8 @@
         <mxCell id="cU8iCuc8kWzyjxLsSZUr-33" edge="1" parent="1" source="cU8iCuc8kWzyjxLsSZUr-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="cU8iCuc8kWzyjxLsSZUr-32">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="cU8iCuc8kWzyjxLsSZUr-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="spawnTime=1.0&lt;div&gt;_spawnTimer=0.0&lt;/div&gt;&lt;div&gt;gameTime=60.0&lt;/div&gt;" vertex="1">
-          <mxGeometry height="60" width="127.87" x="-71.18" y="439.5" as="geometry" />
+        <mxCell id="cU8iCuc8kWzyjxLsSZUr-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="spawnTime=1.0&lt;div&gt;_spawnTimer=0.0&lt;/div&gt;&lt;div&gt;gameTime=60.0&lt;/div&gt;&lt;div&gt;CanvasLayer pauseMenu&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75.5" width="181.18" x="-97.84" y="427" as="geometry" />
         </mxCell>
         <mxCell id="cU8iCuc8kWzyjxLsSZUr-13" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="_Process(delta)" vertex="1">
           <mxGeometry height="60" width="100" x="590" y="120" as="geometry" />
@@ -202,8 +202,8 @@
         <mxCell id="ElwFpHjQi8tPwXCeoO4u-22" edge="1" parent="1" source="ElwFpHjQi8tPwXCeoO4u-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="ElwFpHjQi8tPwXCeoO4u-18">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ElwFpHjQi8tPwXCeoO4u-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="timerTemp=_timerScene.Instantiate&amp;lt;Label&amp;gt;()" vertex="1">
-          <mxGeometry height="31" width="270" x="244" y="244" as="geometry" />
+        <mxCell id="ElwFpHjQi8tPwXCeoO4u-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="timerTemp=_timerScene.Instantiate&amp;lt;Label&amp;gt;()&lt;div&gt;pauseMenu = GetNode&amp;lt;CanvasLayer&amp;gt;(&quot;CanvasLayer&quot;)&lt;/div&gt;&lt;div&gt;pauseMenu.Visible=false&lt;/div&gt;" vertex="1">
+          <mxGeometry height="57" width="314" x="222" y="218" as="geometry" />
         </mxCell>
         <mxCell id="ElwFpHjQi8tPwXCeoO4u-17" edge="1" parent="1" source="ElwFpHjQi8tPwXCeoO4u-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ElwFpHjQi8tPwXCeoO4u-19">
           <mxGeometry relative="1" as="geometry" />
@@ -213,6 +213,21 @@
         </mxCell>
         <mxCell id="ElwFpHjQi8tPwXCeoO4u-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="AddChild(&quot;timerTemp&quot;)" vertex="1">
           <mxGeometry height="42" width="153" x="301" y="387" as="geometry" />
+        </mxCell>
+        <mxCell id="313RYZGhZyS-u88Kx0JY-3" edge="1" parent="1" source="313RYZGhZyS-u88Kx0JY-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;defaultLabelBackgroundColor=gap;" target="313RYZGhZyS-u88Kx0JY-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="313RYZGhZyS-u88Kx0JY-1" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="togglePause" vertex="1">
+          <mxGeometry height="60" width="100" x="1908" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="313RYZGhZyS-u88Kx0JY-5" edge="1" parent="1" source="313RYZGhZyS-u88Kx0JY-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=gap;" target="313RYZGhZyS-u88Kx0JY-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="313RYZGhZyS-u88Kx0JY-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="GetTree().Paused= !GetTree().Paused;&lt;div&gt;pauseMenu.Visible=GetTree().Paused&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="239" x="1838.5" y="231.5" as="geometry" />
+        </mxCell>
+        <mxCell id="313RYZGhZyS-u88Kx0JY-4" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="End" vertex="1">
+          <mxGeometry height="60" width="100" x="1908" y="358" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
