@@ -12,6 +12,7 @@ public partial class Global : Node2D
 	public int robotY {get; set;} =0;
 	public int score {get; set;} =0;
 	public int highScore {get; set;} =0;
+	public int _gameTime {get; set;} =0;
 
 	public override void _Ready()
 	{

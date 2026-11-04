@@ -1,3 +1,24 @@
 [gd_scene format=3 uid="uid://bx5ubvwrk3ake"]
 
-[node name="Bomb" type="Node2D" unique_id=1514397016]
+[ext_resource type="Script" uid="uid://dvfg0re2eonu0" path="res://Bomb/Bomb.cs" id="1_u8wor"]
+[ext_resource type="Texture2D" uid="uid://bme4w5s615y22" path="res://Assets/Bomb template.png" id="2_u8wor"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ot7eb"]
+size = Vector2(72, 73)
+
+[node name="Bomb" type="CharacterBody2D" unique_id=2069516372]
+script = ExtResource("1_u8wor")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=837860699]
+position = Vector2(-1.9073486e-06, -1.9073486e-06)
+scale = Vector2(0.34324634, 0.3533654)
+texture = ExtResource("2_u8wor")
+
+[node name="bombHitbox" type="Area2D" parent="." unique_id=324683826]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bombHitbox" unique_id=810218491]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ot7eb")
+
+[connection signal="mouse_entered" from="bombHitbox" to="." method="onBombHitboxMouseEntered"]
+[connection signal="mouse_exited" from="bombHitbox" to="." method="onBombHitboxMouseExited"]

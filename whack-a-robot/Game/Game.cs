@@ -4,7 +4,7 @@ using System;
 public partial class Game : Node2D
 {
 	private PackedScene _robotScene=GD.Load<PackedScene>("res://Robot/robot.tscn");
-
+	private CanvasLayer pauseMenu;
 
 	private RandomNumberGenerator _rngX=new RandomNumberGenerator();
 	private RandomNumberGenerator _rngY=new RandomNumberGenerator();
@@ -19,7 +19,9 @@ public partial class Game : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
+		pauseMenu=GetNode<CanvasLayer>("CanvasLayer");
+		pauseMenu.Visible=false;
+		Global.Instance._gameTime=10;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,6 +37,12 @@ public partial class Game : Node2D
 			_spawnTimer=spawnTime;
 			spawn();
 
+		}
+
+		if(Input.IsActionPressed("tab_pressed"))
+		{
+			togglePause();
+			GD.Print("Tab pressed");
 		}
 
 	}
@@ -58,5 +66,10 @@ public partial class Game : Node2D
 
 	}
 
-	
+	public void togglePause()
+	{
+		GetTree().Paused=!GetTree().Paused;
+		pauseMenu.Visible=true;
+	}
+
 }

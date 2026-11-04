@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bqrmf3dlqbegr"]
+
+[ext_resource type="Script" uid="uid://dj1x575cyfd4q" path="res://Pause/PauseMenu.cs" id="1_1nalv"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1569657729]
+script = ExtResource("1_1nalv")
+
+[node name="Pause menu" type="Control" parent="." unique_id=214895280]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+
+[node name="Panel" type="Panel" parent="Pause menu" unique_id=697143651]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 1154.0
+offset_bottom = 647.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause menu" unique_id=479996251]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.062000003
+offset_left = 390.0
+offset_top = 231.0
+offset_right = 685.715
+offset_bottom = 342.948
+alignment = 1
+
+[node name="Resume" type="Button" parent="Pause menu/VBoxContainer" unique_id=2059259422]
+layout_mode = 2
+text = "Resume"
+
+[connection signal="pressed" from="Pause menu/VBoxContainer/Resume" to="." method="onResumePressed"]
