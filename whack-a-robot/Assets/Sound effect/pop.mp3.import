@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b02180je08gas"
+path="res://.godot/imported/pop.mp3-ddc6524f3f133d23b3373cf368816168.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound effect/pop.mp3"
+dest_files=["res://.godot/imported/pop.mp3-ddc6524f3f133d23b3373cf368816168.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

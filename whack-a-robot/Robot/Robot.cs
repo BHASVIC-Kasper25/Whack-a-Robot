@@ -9,11 +9,14 @@ public partial class Robot : CharacterBody2D
 	private bool onRobot=false;
 	private int thisHoleNumX=0;
 	private int thisHoleNumY=0;
+
+	private AudioStreamPlayer2D _sfxPlayer;
 	
 	public override void _Ready()
 	{
 		thisHoleNumX=Global.Instance.robotX;
 		thisHoleNumY=Global.Instance.robotY;
+		_sfxPlayer=GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D");
 	}
 	
 	
@@ -25,6 +28,8 @@ public partial class Robot : CharacterBody2D
 			Global.Instance.xClear[thisHoleNumX]=true;
 			Global.Instance.yClear[thisHoleNumY]=true;
 			QueueFree();
+			_sfxPlayer.Play();
+			GD.Print("SFX played");
 		}
 
 		if(_killTimer>0)

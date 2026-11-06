@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3oyw55kt0tc5"
+path="res://.godot/imported/mediumExplosion.mp3-e5eca5edd029cb2c57efba1098e7c26f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound effect/mediumExplosion.mp3"
+dest_files=["res://.godot/imported/mediumExplosion.mp3-e5eca5edd029cb2c57efba1098e7c26f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

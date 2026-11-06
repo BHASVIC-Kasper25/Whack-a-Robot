@@ -4,10 +4,12 @@ using System;
 public partial class Game : Node2D
 {
 	private PackedScene _robotScene=GD.Load<PackedScene>("res://Robot/robot.tscn");
+	private PackedScene _bombScene=GD.Load<PackedScene>("res://Bomb/bomb.tscn");
 	private CanvasLayer pauseMenu;
 
 	private RandomNumberGenerator _rngX=new RandomNumberGenerator();
 	private RandomNumberGenerator _rngY=new RandomNumberGenerator();
+	private RandomNumberGenerator _rngType=new RandomNumberGenerator();
 
 	private double spawnTime=1.0f;
 	private double _spawnTimer=1.0f;
@@ -21,7 +23,7 @@ public partial class Game : Node2D
 	{
 		pauseMenu=GetNode<CanvasLayer>("CanvasLayer");
 		pauseMenu.Visible=false;
-		Global.Instance._gameTime=10;
+		Global.Instance._gameTime=60;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -50,8 +52,12 @@ public partial class Game : Node2D
 	public void spawn()
 	{
 		CharacterBody2D robotTemp=_robotScene.Instantiate<CharacterBody2D>();
+		CharacterBody2D bombTemp=_bombScene.Instantiate<CharacterBody2D>();
+
 		int holeNumX=_rngX.RandiRange(0,2);
 		int holeNumY=_rngY.RandiRange(0,2);
+		int type=_rngType.RandiRange(0,2);
+
 		while(Global.Instance.xClear[holeNumX]==false && Global.Instance.yClear[holeNumY]==false)
 		{
 			holeNumX=_rngX.RandiRange(0,2);
@@ -61,9 +67,18 @@ public partial class Game : Node2D
 		Global.Instance.yClear[holeNumY]=false;
 		Global.Instance.robotX=holeNumX;
 		Global.Instance.robotY=holeNumX;
-		robotTemp.Position=new Vector2(xCoo[holeNumX],yCoo[holeNumY]);
-		AddChild(robotTemp);
-
+		if(type==1)
+		{
+			bombTemp.Position=new Vector2(xCoo[holeNumX],yCoo[holeNumY]);
+			AddChild(bombTemp);
+			GD.Print("Bomb Spawned");
+		}
+		else
+		{
+			robotTemp.Position=new Vector2(xCoo[holeNumX],yCoo[holeNumY]);
+			AddChild(robotTemp);
+			GD.Print("Robot Spawned");
+		}
 	}
 
 	public void togglePause()

@@ -2,12 +2,18 @@
 
 [ext_resource type="Script" uid="uid://baw7fvcm1sf3r" path="res://Robot/Robot.cs" id="1_7isc1"]
 [ext_resource type="Texture2D" uid="uid://bpekyvoc21ot7" path="res://Assets/Robot template.png" id="1_nkalu"]
+[ext_resource type="AudioStream" uid="uid://b02180je08gas" path="res://Assets/Sound effect/pop.mp3" id="2_rex5l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ot7eb"]
 size = Vector2(72, 73)
 
 [node name="Robot" type="CharacterBody2D" unique_id=2069516372]
 script = ExtResource("1_7isc1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=576343088]
+stream = ExtResource("2_rex5l")
+volume_db = 7.477
+autoplay = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=837860699]
 position = Vector2(-1.9073486e-06, -1.9073486e-06)
