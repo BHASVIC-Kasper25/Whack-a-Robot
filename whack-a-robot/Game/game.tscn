@@ -17,73 +17,76 @@ font_size = 30
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oomkl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmv3x"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(0, 0, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_buohc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oomkl"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(620, 0, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kul4i"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_buohc"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(1240, 0, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7gi1t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kul4i"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(1860, 0, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fsxsm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gi1t"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(0, 620, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_glinl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsxsm"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(620, 620, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_72g0p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_glinl"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(1240, 620, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4lqr4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_72g0p"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(1860, 620, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qlwvw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lqr4"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(0, 1240, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rpdke"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlwvw"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(620, 1240, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_33n3b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpdke"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(1240, 1240, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rxmp4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_33n3b"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(1860, 1240, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qyr8x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxmp4"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(0, 1860, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ss60k"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyr8x"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(620, 1860, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2cxdh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss60k"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(1240, 1860, 620, 620)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4w5h0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cxdh"]
 atlas = ExtResource("6_qmv3x")
 region = Rect2(1860, 1860, 620, 620)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_fwxkx"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_4w5h0"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmv3x")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oomkl")
 }, {
@@ -128,9 +131,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2cxdh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4w5h0")
 }],
 "loop": 1,
 "name": &"default",
@@ -179,17 +179,13 @@ label_settings = SubResource("LabelSettings_24ds3")
 
 [node name="CanvasLayer" parent="." unique_id=1569657729 instance=ExtResource("5_fwxkx")]
 
-[node name="MultiplierFolder" type="Control" parent="." unique_id=270088375]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Node2D" type="Node2D" parent="." unique_id=848003147]
 
-[node name="Multiplier" type="Node2D" parent="." unique_id=416240079]
+[node name="Multiplier" type="CharacterBody2D" parent="Node2D" unique_id=574197287]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Multiplier" unique_id=1337753228]
-position = Vector2(150, 305)
-scale = Vector2(0.3532258, 0.34032258)
-sprite_frames = SubResource("SpriteFrames_fwxkx")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Multiplier" unique_id=423240438]
+position = Vector2(1035, 325)
+scale = Vector2(0.32741934, 0.32741934)
+sprite_frames = SubResource("SpriteFrames_4w5h0")
 
 [connection signal="timeout" from="Timer/Timer" to="Timer" method="_onTimerTimeout"]
