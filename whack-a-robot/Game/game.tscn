@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://w1yw8s2hkvf3" path="res://Timer/Timer.cs" id="3_7raqb"]
 [ext_resource type="Script" uid="uid://ds8nqkr6qqedy" path="res://Score/Score.cs" id="4_jcm6v"]
 [ext_resource type="PackedScene" uid="uid://bqrmf3dlqbegr" path="res://Pause/pauseMenu.tscn" id="5_fwxkx"]
+[ext_resource type="Texture2D" uid="uid://cqyum0orisnud" path="res://Assets/Multiplier assets.png" id="6_qmv3x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3h7m6"]
 font_size = 22
@@ -15,6 +16,126 @@ outline_color = Color(0, 0, 0, 1)
 font_size = 30
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oomkl"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(0, 0, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buohc"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(620, 0, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kul4i"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(1240, 0, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gi1t"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(1860, 0, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsxsm"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(0, 620, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glinl"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(620, 620, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72g0p"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(1240, 620, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lqr4"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(1860, 620, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlwvw"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(0, 1240, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpdke"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(620, 1240, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33n3b"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(1240, 1240, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxmp4"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(1860, 1240, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyr8x"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(0, 1860, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss60k"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(620, 1860, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cxdh"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(1240, 1860, 620, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4w5h0"]
+atlas = ExtResource("6_qmv3x")
+region = Rect2(1860, 1860, 620, 620)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fwxkx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oomkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buohc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kul4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gi1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsxsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glinl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72g0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lqr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlwvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpdke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33n3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxmp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyr8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ss60k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cxdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4w5h0")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Game" type="Node2D" unique_id=180533987]
 script = ExtResource("1_1r4le")
@@ -57,5 +178,18 @@ offset_right = 67.0
 label_settings = SubResource("LabelSettings_24ds3")
 
 [node name="CanvasLayer" parent="." unique_id=1569657729 instance=ExtResource("5_fwxkx")]
+
+[node name="MultiplierFolder" type="Control" parent="." unique_id=270088375]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Multiplier" type="Node2D" parent="." unique_id=416240079]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Multiplier" unique_id=1337753228]
+position = Vector2(150, 305)
+scale = Vector2(0.3532258, 0.34032258)
+sprite_frames = SubResource("SpriteFrames_fwxkx")
 
 [connection signal="timeout" from="Timer/Timer" to="Timer" method="_onTimerTimeout"]

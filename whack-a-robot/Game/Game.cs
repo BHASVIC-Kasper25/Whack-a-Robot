@@ -24,6 +24,7 @@ public partial class Game : Node2D
 		pauseMenu=GetNode<CanvasLayer>("CanvasLayer");
 		pauseMenu.Visible=false;
 		Global.Instance._gameTime=60;
+		this.GetNode<AnimatedSprite2D>("multiplier").Frame=2;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
