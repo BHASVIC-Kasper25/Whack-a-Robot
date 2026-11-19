@@ -11,12 +11,15 @@ public partial class Robot : CharacterBody2D
 	private int thisHoleNumY=0;
 
 	private AudioStreamPlayer2D _sfxPlayer;
+	private CharacterBody2D _multiplier;
 	
 	public override void _Ready()
 	{
 		thisHoleNumX=Global.Instance.robotX;
 		thisHoleNumY=Global.Instance.robotY;
 		_sfxPlayer=GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D");
+		_multiplier=GetNode<CharacterBody2D>("Multiplier");
+		_multiplier.readWriteMultiplier=12;
 	}
 	
 	

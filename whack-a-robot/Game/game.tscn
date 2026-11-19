@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://w1yw8s2hkvf3" path="res://Timer/Timer.cs" id="3_7raqb"]
 [ext_resource type="Script" uid="uid://ds8nqkr6qqedy" path="res://Score/Score.cs" id="4_jcm6v"]
 [ext_resource type="PackedScene" uid="uid://bqrmf3dlqbegr" path="res://Pause/pauseMenu.tscn" id="5_fwxkx"]
+[ext_resource type="Script" uid="uid://c0j7owsepnft4" path="res://Multiplier/Multiplier.cs" id="6_oomkl"]
 [ext_resource type="Texture2D" uid="uid://cqyum0orisnud" path="res://Assets/Multiplier assets.png" id="6_qmv3x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3h7m6"]
@@ -182,6 +183,7 @@ label_settings = SubResource("LabelSettings_24ds3")
 [node name="Node2D" type="Node2D" parent="." unique_id=848003147]
 
 [node name="Multiplier" type="CharacterBody2D" parent="Node2D" unique_id=574197287]
+script = ExtResource("6_oomkl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Multiplier" unique_id=423240438]
 position = Vector2(1035, 325)
