@@ -22,6 +22,7 @@ public partial class Bomb : CharacterBody2D
 		if (Input.IsActionPressed("left_click") && onBomb==true)
 		{
 			Global.Instance._gameTime-=5;
+			Global.Instance.multiplier=0;
 			Global.Instance.xClear[thisHoleNumX]=true;
 			Global.Instance.yClear[thisHoleNumY]=true;
 			QueueFree();

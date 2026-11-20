@@ -11,15 +11,12 @@ public partial class Robot : CharacterBody2D
 	private int thisHoleNumY=0;
 
 	private AudioStreamPlayer2D _sfxPlayer;
-	private CharacterBody2D _multiplier;
 	
 	public override void _Ready()
 	{
 		thisHoleNumX=Global.Instance.robotX;
 		thisHoleNumY=Global.Instance.robotY;
 		_sfxPlayer=GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D");
-		_multiplier=GetNode<CharacterBody2D>("Multiplier");
-		_multiplier.readWriteMultiplier=12;
 	}
 	
 	
@@ -27,7 +24,8 @@ public partial class Robot : CharacterBody2D
 	{
 		if (Input.IsActionPressed("left_click") && onRobot==true)
 		{
-			Global.Instance.score=Global.Instance.score+5;
+			Global.Instance.score=Global.Instance.score+(5*(Global.Instance.multiplier+1));
+			Global.Instance.multiplier++;
 			Global.Instance.xClear[thisHoleNumX]=true;
 			Global.Instance.yClear[thisHoleNumY]=true;
 			QueueFree();
@@ -42,6 +40,7 @@ public partial class Robot : CharacterBody2D
 		else
 		{
 			_killTimer=killTime;
+			Global.Instance.multiplier=0;
 			Global.Instance.xClear[thisHoleNumX]=true;
 			Global.Instance.yClear[thisHoleNumY]=true;
 			QueueFree();

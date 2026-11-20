@@ -13,6 +13,7 @@ public partial class Global : Node2D
 	public int score {get; set;} =0;
 	public int highScore {get; set;} =0;
 	public int _gameTime {get; set;} =0;
+	public int multiplier {get; set;} =0;
 
 	public override void _Ready()
 	{
@@ -22,5 +23,9 @@ public partial class Global : Node2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		if(multiplier>15)
+		{
+			multiplier=15;
+		}
 	}
 }
