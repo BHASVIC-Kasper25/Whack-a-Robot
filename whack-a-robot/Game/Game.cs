@@ -3,13 +3,15 @@ using System;
 
 public partial class Game : Node2D
 {
+	//Loads the scenes for robot and bomb so they can later be spawned
 	private PackedScene _robotScene=GD.Load<PackedScene>("res://Robot/robot.tscn");
 	private PackedScene _bombScene=GD.Load<PackedScene>("res://Bomb/bomb.tscn");
+	
+	//Loads the pauseMenu scene so it can be used
 	private CanvasLayer pauseMenu;
 
-	private RandomNumberGenerator _rngX=new RandomNumberGenerator();
-	private RandomNumberGenerator _rngY=new RandomNumberGenerator();
-	private RandomNumberGenerator _rngType=new RandomNumberGenerator();
+	//Creates a random rumber generator
+	private RandomNumberGenerator _rng=new RandomNumberGenerator();
 
 	private double spawnTime=1.0f;
 	private double _spawnTimer=1.0f;
@@ -55,14 +57,14 @@ public partial class Game : Node2D
 		CharacterBody2D robotTemp=_robotScene.Instantiate<CharacterBody2D>();
 		CharacterBody2D bombTemp=_bombScene.Instantiate<CharacterBody2D>();
 
-		int holeNumX=_rngX.RandiRange(0,2);
-		int holeNumY=_rngY.RandiRange(0,2);
-		int type=_rngType.RandiRange(0,2);
+		int holeNumX=_rng.RandiRange(0,2);
+		int holeNumY=_rng.RandiRange(0,2);
+		int type=_rng.RandiRange(0,2);
 
 		while(Global.Instance.xClear[holeNumX]==false && Global.Instance.yClear[holeNumY]==false)
 		{
-			holeNumX=_rngX.RandiRange(0,2);
-			holeNumY=_rngY.RandiRange(0,2);
+			holeNumX=_rng.RandiRange(0,2);
+			holeNumY=_rng.RandiRange(0,2);
 		}
 		Global.Instance.xClear[holeNumX]=false;
 		Global.Instance.yClear[holeNumY]=false;

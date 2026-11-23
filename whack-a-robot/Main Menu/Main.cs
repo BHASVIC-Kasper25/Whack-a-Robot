@@ -13,11 +13,13 @@ public partial class Main : Node2D
 	{
 	}
 
+	//Played when the start button is pressed and changes the scene to the game
 	public void onStartPressed()
 	{
 		GetTree().ChangeSceneToFile("res://Game/game.tscn");
 	}
 
+	//Played when the quit button is pressed and closes the game
 	public void onQuitPressed()
 	{
 		GetTree().Quit();
