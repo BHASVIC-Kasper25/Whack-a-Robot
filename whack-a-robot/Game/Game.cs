@@ -13,9 +13,11 @@ public partial class Game : Node2D
 	//Creates a random rumber generator
 	private RandomNumberGenerator _rng=new RandomNumberGenerator();
 
+	//Creates values that are used as a timer to spawn enemies
 	private double spawnTime=1.0f;
 	private double _spawnTimer=1.0f;
 
+	//Creates two arrays that contains the x and y coordiantes of each hole
 	Godot.Collections.Array<int> xCoo = [360, 570, 760];
 	Godot.Collections.Array<int> yCoo = [150, 330, 515];
 
@@ -23,8 +25,11 @@ public partial class Game : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		//Loads the pause menu into game and sets it to be invisible
 		pauseMenu=GetNode<CanvasLayer>("CanvasLayer");
 		pauseMenu.Visible=false;
+
+		//Sets the _gameTime to one minute and resets the multiplier to 0
 		Global.Instance._gameTime=60;
 		Global.Instance.multiplier=0;
 	}
@@ -32,13 +37,16 @@ public partial class Game : Node2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-
+		//Checks if the _spawnTimer is above 0 and if it is not an object will be spawned
 		if(_spawnTimer>=0)
 		{
+			//decrease _spawnTimer by delta, converted to a float.
+			//delta has the value of the time elapsed during a frame.
 			_spawnTimer-=(float)delta;
 		}
 		else
 		{
+			//resets _spawnTimer and the enters the spawn() subroutine
 			_spawnTimer=spawnTime;
 			spawn();
 
@@ -46,17 +54,18 @@ public partial class Game : Node2D
 
 		if(Input.IsActionPressed("tab_pressed"))
 		{
+			//Enters the togglePause subroutine when the tab key is pressed
 			togglePause();
-			GD.Print("Tab pressed");
 		}
 
 	}
 
 	public void spawn()
 	{
+		//Loads the required logic to allow robot and bomb to be spawned
 		CharacterBody2D robotTemp=_robotScene.Instantiate<CharacterBody2D>();
 		CharacterBody2D bombTemp=_bombScene.Instantiate<CharacterBody2D>();
-
+		
 		int holeNumX=_rng.RandiRange(0,2);
 		int holeNumY=_rng.RandiRange(0,2);
 		int type=_rng.RandiRange(0,2);
@@ -74,13 +83,11 @@ public partial class Game : Node2D
 		{
 			bombTemp.Position=new Vector2(xCoo[holeNumX],yCoo[holeNumY]);
 			AddChild(bombTemp);
-			GD.Print("Bomb Spawned");
 		}
 		else
 		{
 			robotTemp.Position=new Vector2(xCoo[holeNumX],yCoo[holeNumY]);
 			AddChild(robotTemp);
-			GD.Print("Robot Spawned");
 		}
 	}
 
