@@ -11,6 +11,7 @@ public partial class Score : Control
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		//Outputs the current score
 		GetNode<Label>("Label").Text="Score: "+Global.Instance.score.ToString("D2");
 	}
 }

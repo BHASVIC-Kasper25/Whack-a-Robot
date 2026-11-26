@@ -6,6 +6,7 @@ public partial class PauseMenu : CanvasLayer
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		//Allows the code and scene to be interactable even when the game is paused
 		ProcessMode = Node.ProcessModeEnum.Always;
 	}
 
@@ -14,10 +15,12 @@ public partial class PauseMenu : CanvasLayer
 	{
 	}
 
+	//Occurs when the resume button is pressed
 	public void onResumePressed()
 	{
+		//Unpauses the game
 		GetTree().Paused=!GetTree().Paused;
+		//Makes the pause menu invisible
 		Visible=false;
-		GD.Print("Resume pressed");
 	}
 }

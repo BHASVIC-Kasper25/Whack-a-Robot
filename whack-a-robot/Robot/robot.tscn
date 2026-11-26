@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cjta3pscoojh2"]
 
 [ext_resource type="Script" uid="uid://baw7fvcm1sf3r" path="res://Robot/Robot.cs" id="1_7isc1"]
-[ext_resource type="Texture2D" uid="uid://bpekyvoc21ot7" path="res://Assets/Robot template.png" id="1_nkalu"]
 [ext_resource type="AudioStream" uid="uid://b02180je08gas" path="res://Assets/Sound effect/pop.mp3" id="2_rex5l"]
+[ext_resource type="Texture2D" uid="uid://coxuen6l2iqey" path="res://Assets/Robot final.png" id="3_rex5l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ot7eb"]
-size = Vector2(72, 73)
+size = Vector2(84, 86)
 
 [node name="Robot" type="CharacterBody2D" unique_id=2069516372]
 script = ExtResource("1_7isc1")
@@ -15,14 +15,14 @@ stream = ExtResource("2_rex5l")
 volume_db = 7.477
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=837860699]
-position = Vector2(-1.9073486e-06, -1.9073486e-06)
-scale = Vector2(0.34324634, 0.3533654)
-texture = ExtResource("1_nkalu")
+position = Vector2(0, -9.000001)
+scale = Vector2(0.1041851, 0.107256524)
+texture = ExtResource("3_rex5l")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=186399224]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=810218491]
-position = Vector2(0, -0.5)
+position = Vector2(-3, -7)
 shape = SubResource("RectangleShape2D_ot7eb")
 
 [connection signal="mouse_entered" from="Hitbox" to="." method="onHitboxMouseEntered"]

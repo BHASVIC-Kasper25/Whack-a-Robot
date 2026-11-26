@@ -66,10 +66,13 @@ public partial class Game : Node2D
 		CharacterBody2D robotTemp=_robotScene.Instantiate<CharacterBody2D>();
 		CharacterBody2D bombTemp=_bombScene.Instantiate<CharacterBody2D>();
 		
+		//Creates random number, each number is assoicaited with an a row or column
 		int holeNumX=_rng.RandiRange(0,2);
 		int holeNumY=_rng.RandiRange(0,2);
+		//Random number for what type the object will be
 		int type=_rng.RandiRange(0,2);
 
+		//Checks if the hole selected is empty or not
 		while(Global.Instance.xClear[holeNumX]==false && Global.Instance.yClear[holeNumY]==false)
 		{
 			holeNumX=_rng.RandiRange(0,2);
@@ -77,24 +80,33 @@ public partial class Game : Node2D
 		}
 		Global.Instance.xClear[holeNumX]=false;
 		Global.Instance.yClear[holeNumY]=false;
-		Global.Instance.robotX=holeNumX;
-		Global.Instance.robotY=holeNumX;
+		//Global.Instance.robotX=holeNumX;
+		//Global.Instance.robotY=holeNumX;
+
+		//Selects what the new object will be. Has a 1/3 chance of being a bomb
 		if(type==1)
 		{
+			//Sets the position
 			bombTemp.Position=new Vector2(xCoo[holeNumX],yCoo[holeNumY]);
+			//Adds a bomb
 			AddChild(bombTemp);
 		}
 		else
 		{
+			//Sets the position
 			robotTemp.Position=new Vector2(xCoo[holeNumX],yCoo[holeNumY]);
+			//Adds a robot
 			AddChild(robotTemp);
 		}
 	}
 
 	public void togglePause()
 	{
+		//Pauses all operations in the game
 		GetTree().Paused=!GetTree().Paused;
+		//Makes the pause menu visible 
 		pauseMenu.Visible=true;
 	}
+
 
 }
